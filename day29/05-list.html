@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-list.html</title>
+</head>
+<body>
+    
+    <h1>05-list.html</h1>
+    <hr>
+
+    <!-- 요소들을 만들어내는 기능 태그방법에만 집중하자, 모양은 언제든지 변경하고
+    바뀔 수 있다/ 태그에 따라서 기능을 집중 습득하기-->
+    <h3>unordered list : 순번을 매기지 않은 목록 나열</h3>
+    <ul type="disc">
+        <li>network</li>
+        <li>windows</li>
+        <li>liunx</li>
+        <li>python</li>
+        <li>C</li>
+        <li>
+            java
+            <ul>
+                <li>data type</li>
+                <li>variable</li>
+                <li>oprtator</li>
+                <li>control statements</li>
+            </ul>
+        </li>
+    </ul>
+    <!--어떻게 넘어가서 어떻게 하니까 어떻게 나온다라는 느낌으로
+    필요에 의한 부분까지 뜯어볼 필요가 있다-->
+
+    <h3>ordered list: 순번을 자동으로 매겨주는 리스트</h3>
+    <ol type="A">
+        <li>객체지향 프로그래밍</li>
+        <li>데이터베이스 시스템</li>
+        <li>화면 설계 / 구현</li>
+        <li>서버 프로그램 구현</li>
+        <li>
+            프레임워크 개발
+            <ol type="a">
+                <li>스프링 프레임워크 개요</li>
+                <li>Ioc (Inversion Of Control</li>
+                <li>DI (dependency Injection)</li>
+                <li>AOP (Aspect Oriented Programming)</li>
+            </ol>
+        </li>
+        <li>베포 및 테스트</li>
+    </ol>
+
+    <!-- ol : 순선을 매기는 리스트
+        ul : 순번을 매기지 않는 리스트 
+        초록색(패딩)은 내부 간격으로 실제 내용과 겉테두리 사이의 여백을 의미한다
+        실제내용으로 인해 크기가 커질 수 있다
+        마진(바깥쪽의 간격) 외부 요소를 의미하기 때문에 실제 내용으로 인해 크기가 커지지 않는다
+        태그들 마다 기본 스타일이 잡혀있다, 모든 것을 초기화 시키면 글자만 둥둥 떠다니게 할 수도 있다
+        (외부 스타일 값, 속성 초기화가 그 방법이다)
+        사진의 경우 공간차지가 거의 없지만 p태그에 따라서 여백을 가지는 경우도 있긴 하다-->
+</body>
+</html>

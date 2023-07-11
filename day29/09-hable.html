@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-table.html</title>
+</head>
+<body>
+
+    <h1>테이블 가로 세로 합치기 연습</h1>
+    <hr>
+
+    <fieldset>
+        5칸, 5줄
+    </fieldset>
+
+    <style>
+        table { /*border : 선 색깔
+            table의 선 색깔을 의미한다*/
+            border-collapse: collapse;
+            border: 1px solid #dadada;
+        }
+        th { /*background-color : 전체 바탕*/
+            /*border : 선 색깔
+            th의 선 색깔을 의미한다*/
+            padding: 5px 10px;
+            background-color: lightpink;
+            border: 2px solid #dadada;
+        }
+        th.hidden{
+            background-color: white;
+            /*border: 선색깔을 의미한다
+            th.hidden에서는 선색깔과 크기가 없도록 지정
+            만약 현재 속성으로 없다면 선이 모두 들어난다
+            그래서 값이 없는 공간이 table 속성의 영향을 받아
+            dadada색으로 들어나게 되기 떄문에 border: 0;으로
+            덮어 선이 없는 공간인 것처럼 나타나게 해준다*/
+            border: 0;
+        }
+
+    </style>
+
+    <br>
+    <table>
+        <tr> <!--rowspan : 사용할 칸 수-->
+            <th rowspan="3">돼지머리</th>
+            <th>목살</th>
+            <th rowspan="2">가브라살</th>
+            <th rowspan="2">등심</th>
+            <th rowspan="4">뒷다리살</th>
+        </tr>
+        <tr>
+            <th>항정살</th>
+        </tr>
+        <tr>
+            <th>갈비</th>
+            <th>갈메기살</th>
+            <th>안심</th>
+        </tr>
+        <tr>
+            <th class="hidden"></th>
+            <th>압다리살</th>
+            <th class="2">삼겹살</th>
+        </tr>
+        <tr>
+            <th class="hidden"></th>
+            <th>돈족</th>
+            <th class="hidden"></th>
+            <th class="hidden"></th>
+            <th>돈족</th>
+        </tr>
+    </table>
+
+</body>
+</html>
