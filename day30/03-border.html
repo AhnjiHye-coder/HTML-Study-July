@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-border.html</title>
+     <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            margin: 0;
+            border: 1px solid black;
+            padding: 5px 10px;
+            /*세로 가로 순서 ↓, →*/
+            /*padding : [all];
+              padding : [top-bottom] [left-right]
+              padding : [top] [right] [bottom] [left] */
+        }
+
+     </style>
+</head>
+<body>
+    
+    <h1>03-border.html</h1>
+    <hr>
+
+    <table>
+        <tr>
+            <td>margin</td>
+            <td>테두리 바깥쪽 여백</td>
+        </tr>
+        <tr>
+            <td>border</td>
+            <td>테두리</td>
+        </tr>
+        <tr>
+            <td>padding</td>
+            <td>테두리 안쪽 여백</td>
+        </tr>
+    </table>
+
+    <style>
+        div {
+            /* div태그가 있는 모든 것에 속성이 적용된다*/
+            width: 100px;
+            height: 100px;
+        }
+        #item1{
+            /*바깝쪽 좌우,상하 여백의 속성을 담당한다*/
+            margin: 10px auto;
+            /*테두리 속성을 담당한다*/
+            border: 2px solid black;
+            /*안쪽 속성 여백을 담당한다
+            테두리 안에 글씨가 있으면 테두리로 부터의 간격을 나타낸다*/
+            padding: 10px;
+        }
+        #item2 {
+            /* auto가 없으면 좌우로만 적용되고
+            있으면 자동으로 좌우상하 간격이 맞춰진다*/
+            margin: 4px; 
+            border: 3px solid red;
+            padding: 20px 40px;
+            /*상하 좌우로 가로세로를 다른 사이즈로  조절할 수 있다*/
+        }
+    </style>
+
+    <!--div#item1 하고 엔터치면 자동완성 됨 : <div id="item1"></div>-->
+    <div id="item1">item1</div>
+    <div id="item2">item2</div>
+
+</body>
+</html>

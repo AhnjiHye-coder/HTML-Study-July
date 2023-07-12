@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-background.html</title>
+    <!--평균적인 화면의 픽셀 가로 1920 세로 1080-->
+    <style>
+        .item {
+            /*background-image : url('image/danbi.jpg');*/
+            background-repeat: no-repeat;/*반복 안함*/
+            background-size: 100%;/*너비는 자동, 높이는 100%*/
+            background-position: center;
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+        .item > p {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        div.flex {
+            display: flex;
+            width: 1600px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>07-background.html</h1>
+    <hr>
+
+    <div class="flex">
+        <div class="item" style="background-image : url('image/danbi.jpg');">
+            <p>단비꺼야</p>
+        </div>
+
+        <div class="item" style="background-image: url('image/iu.jpg');"></div>
+        <div class="item" style="background-image: url('image/jisoo.png');"></div>
+        <div class="item" style="background-image: url('image/heos.gif');"></div>
+        <div class="item" style="background-image: url('image/dora.png');"></div>
+    </div>
+    
+</body>
+</html>

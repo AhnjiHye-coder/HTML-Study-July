@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-div_span.html</title>
+</head>
+<body>
+    
+    <h1>01-div_span.html</h1>
+    <hr>
+
+    <p>
+        div : 화면 영역을 분리하기 위한 태그, 혼자소 한 줄을 차지한다
+    </p>
+    <p>
+        span : 요소를 구분하기 위한 태그, 줄 바꿈이 없고, 내부 컨텐츠만큼 크기를 차지한다
+    </p>
+
+
+    <div style="background-color: lightpink;">1</div>
+    <div style="background-color: lightpink;">2</div>
+    <div style="background-color: lightpink;">3</div>
+
+    <span style="background-color: lightskyblue;">4</span>
+    <span style="background-color: lightskyblue;">5</span>
+    <span style="background-color: lightskyblue;">6</span>
+
+
+    <!-- 요소를 지목하는 방법
+    1. 태그 이름, id(특정요소 하나만 찍어낼때) 클래스(같은 클래스 이름을 가진면 일괄적으로 처리)
+    클래스라는 속성을 지정해서 해당 클래스가  item인 요소는 아래의 스타일 속성을 적용한다-->
+
+    <style>
+        .itme{
+            background-color: lightgreen;
+        }
+    </style>
+
+    <div class="itme">7</div> <!--코드의 가독성을 위해 스타일은 위에서 지정하고-->
+    <div class="itme">8</div> <!--지정해둔 스타일을 불러온다-->
+    <div class="itme">9</div>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-layout.html</title>
+    <!--여백이 필요하면 마진이나 패딩을 이용할 수 있다-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+        }
+        .frame {
+            width: 100px;
+            margin: 0 auto;
+        }
+        h3 {
+            text-align: center;/*글자 가운데 정렬*/
+            margin: 0; /*h3은 기본적으로 마진이 있기 때문에 없애준다*/
+        }
+        #header, #footer {
+            height: 150px;
+        }
+        #header {
+            background-color: lightcoral;
+        }
+        #main {
+            /*aside와 section이 자리를 차지하고 있기 떄문에
+            색이 안보인다 그냥 틀을 만들어주는 개념*/
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            /*지금은 내용이 없어서 강제로 높이를 생성했지만
+            실제 사이트 만들때는 내용을 넣으면 알아서 늘어난다*/
+            height: 700px;
+        }
+        #main > #aside {
+            flex: 2; /*가로(넓이) 사이즈*/
+            background-color: lightgreen;
+        }
+        #main > #section {
+            flex: 7; /*가로(넓이) 사이즈*/
+            background-color: burlywood;
+        }
+        #footer {
+            background-color: lightblue;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>06-layout.html</h1>
+    <hr>
+    
+    <div id="header" class="frame">
+        <h3>상단</h3>
+    </div>
+
+    <div id="main" class="frame">
+        <div id="aside">
+            <h3>왼쪽메뉴</h3>
+        </div>
+
+        <div id="section">
+            <h3>가운데 중심 내용</h3>
+        </div>
+    </div>
+
+    <div id="footer" class="frame">
+        <h3>하단</h3>
+    </div>
+
+</body>
+</html>
