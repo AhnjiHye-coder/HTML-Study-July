@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-hover.html</title>
+    <style>
+        ul {
+            list-style: none; /*리스트 스타일로 점 없애주고*/
+            display: flex;  /*flex로 내부 item을 가로로 나열되게 한다*/
+        }
+        ul > li {
+            width: 80px; /*버튼의 가로사이즈*/
+            height: 30px; /*버튼의 세로 사이즈*/
+
+            line-height: 30px; /*글자가 세로 축 중간에 있도록 한다
+            위에서 30px떨어진 곳에 글자 위치*/
+            background-color: #dadada; /*ul안에 li의 높이와 넓이의 색깔(즉, 버튼 색깔)*/
+            color: black; /*글자 색*/
+            border-radius: 5px;  /*선 테두리(모서리)*/
+            border: 1px solid black; /*선 굵기, 색깔*/
+            text-align: center; /*글자 중간으로 배치*/
+            margin: 10px;   /*마진으로 버튼사이의 간격을 넓혀준다*/
+        }
+        ul > li:hover {
+            /*그림자를 만들때 사용, 순서는 세로, 가로, 그라데이션, 그라데이션 색상이다*/
+            box-shadow: 5px 5px 5px black;
+            cursor: pointer; /*커서 즉, 마우스는 손모양으로 변경되게 한다*/
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>01-hover.html</h1>
+    <hr>
+
+    <h3>
+        선택자에 특수사항이나 조건을 지정할 수 있다<br>
+        hover(호버)는 요소에 마우스를 올렸을 때 반응하는 선택자이다
+    </h3>
+
+    <ul>
+        <li>버튼1</li>
+        <li>버튼2</li>
+        <li>버튼3</li>
+        <li>버튼4</li>
+        <li>버튼5</li>
+    </ul>
+
+</body>
+</html>

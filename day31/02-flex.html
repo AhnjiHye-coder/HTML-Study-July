@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-flex.html</title>
+    <style>
+        div { /*box-sizing는 박스의 사이징(박스 사이즈를 어떤 것으로 표시할 것인지 정하는 속성으로
+            표시된 그 범위가 박스의 범위가 되는 것이다. 그러므로 박스의 크기를 어떤 기준으로 할 것인지의 대한 속성
+            종류로는 content-box : 콘텐츠 영역을 기준으로 크기를 정한다
+            border-box : 테두리를 기준으로 크기를 정한다
+            initial : 기본값을 설정한다
+            inherit : 부모요소의 속성값을 상속받는다*/
+            box-sizing: border-box; /*div 안에 있는 것이 테두리 안으로 들어온 효과를 볼 수 있다
+             원래 당연히 div안애 요소들이기 때문에 들어와있지만 테두리를 만들어줌으로 더 명확하게
+             포함되고 속성이 적용된 것을 확인할 수 있다*/
+            /*즉, div의 범위의 박스는 테두리를 기준으로 크기를 정한다는 의미이다
+            border(보더)*/
+        }
+        #flex {
+            width: 300px; /*가로*/
+            height: 300px; /*세로*/
+            border: 2px solid black; /*선 굵기, 스타일, 색상*/
+            display: flex;  /*item들 가로 정렬*/
+            position: relative; /*기준이 바디에서 flex로 바뀜
+            즉, 기준을 바꾸려면 기준에 포지션을 설정해 줘야 한다
+            static : 가장 위, 왼쪽에 배치(기본 설정 값) 기본값은 (top, left, bottom, right)값을 무시함
+            relative : 기본값으로 설정되어있는 원래 위치에서 변동이 가능하다
+            기본값은 top, left, bottom, right을 주면 변동이 안되지만 변동을 하고 싶다면 
+            relative로 position(포지션)을 주어 변동하자
+            단 flex에 포지션을 준 것처럼 부모에게 포지션을 주어 자식들이 top, left, bottom, right을 사용하게
+            해줘야하는 것이다 (부모가 자식을 따라간다)
+            absolute : 부모요소를 기준으로 배치된다(자식에 사용)(자식이 부모를 따라한다)
+            fixed : 조상 값에 영향을 받지 않고 화면 아래 위치하게 한다
+            stidkey : 스크롤 영역기준으로 배치*/
+            
+        }
+        .item {
+            background-image: url('image/danbi.jpg');
+            width: 100px;
+            height: 100px;
+            background-size: 100%;
+            z-index: 1; /*그림이 선보다 더 위에 올라와야하기 때문에 index를 다른 것에 비해 높에 잡아준다*/
+        }
+        .main { /*border은 top, bottom, left, right로 있다(위,아래, 좌, 우)*/
+            border-top: 2px dashed red;
+            width: 100%;
+            position: absolute;
+            top: 50%; /*박스의 절반에 선을 위치하도록 하는 설정
+            원래 top은 맨 위를 의미하지만 여기서는 top인 맨 위에 기준으로 50%로 낮춰 top의 위치가 중간으로 맞춰준다
+            그리고 맨 위에 border-top의 빨간선을 주면 50%로 맞춰진 top 위치에 빨간선이 그어지는 것이다*/
+        }
+        .cross { /*선의 left는 블루 점선 색상*/
+            border-left: 2px dashed blue;
+            height: 100%; /*세로 길이 100%*/
+            position: absolute; /*한자리 고정*/
+            left: 50%;/*전체에서 50%되는 곳이 left위치이다.
+            그러므로 left에 선 속성을 입히면 전체 너비의 50%에 선이 그어지는 것이다*/
+        }
+        #control {
+            display: flex;
+        }
+        #control > ul {
+            list-style: none; /*리스트의 스타일은 none으로 아무 스타일도 없다는 의미로 점을 없애준다*/
+        }
+        #control > ul:first-child h3 { /*먼저 있는 h3의 속성*/
+            color: red;
+        }
+        #control > ul:last-child h3 { /*마지막 h3의 속성*/
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>02-flex.html</h1>
+    <hr>
+    
+     <div id="flex">
+        <div class="item"></div>
+        <div class="main"></div>
+        <div class="cross"></div>
+    </div>
+
+    <div id="control">
+        <ul>
+            <h3>justify-content (main-axis)</h3>
+            <li>
+                <label>
+                    <input type="radio" name="main" value="flex-start" 
+                           checked="checked">
+                    flex-start
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="main" value="center">
+                    center
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="main" value="flex-end">
+                    flex-end
+                </label>
+            </li>
+        </ul>
+
+        <ul>
+            <h3>align-items (cross-axis)</h3>
+            <li>
+                <label>
+                    <input type="radio" name="cross" value="flex-start"
+                           checked>
+                    flex-start
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="cross" value="center">
+                    center
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="cross" value="flex-end">
+                    flex-end
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const mainList = document.querySelectorAll('#control > ul:first-child input')
+        const crossList = document.querySelectorAll('#control > ul:last-child input')
+        const flex = document.getElementById('flex')
+
+        mainList.forEach(e => {
+            e.onclick = function(event) {
+                const v = event.target.value
+                flex.style.justifyContent = v
+            }
+        })
+
+        crossList.forEach(e => {
+            e.onclick = function(event) {
+                const v = event.target.value
+                flex.style.alignItems = v
+            }
+        })
+    </script>
+
+</body>
+</html>

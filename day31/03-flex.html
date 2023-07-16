@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-flex.html</title>
+    <style>
+        #header {
+            border: 1px dashed red;
+            /*text-align: center; flex를 걸때는 justify로 글자를 센터로 보낸다*/ 
+            display: flex;
+            justify-content: center;
+        }
+        #main {
+            border: 1px dashed olivedrab;
+            display: flex;
+
+        }
+        #nav {
+            flex: 1; /*main 공간에서 1만 차지하겠다*/
+            border: 1px dashed lightcoral;
+        }
+        #content {
+            border: 1px dashed blue;
+            flex: 4;
+        }
+        #nav > ul {
+            list-style: none;
+            width: 200px;
+            height: 300px;
+            display: flex;
+            flex-direction: column; /* flex가 걸린 상태에서 세로로 세울때 사용
+            row = 기본값으로 내부 li요소들이 가로방향으로 흐른다(좌->우 방향)
+            row-reverse = li요소들이 가로방향으로 흐른다(우->좌방향)
+            column = li요소들이 세로방향으로 흐른다(상->하 방향)
+            column-reverse = li요소들이 세로방향으로 흐른다(하->상 방향)
+            중심축이 돌아가면서 원래는 가로로 움직였지만 세로로 움직이게 된다*/
+            /*flex-direction의 기본값은 row이다*/
+            justify-content: center; /*중심축이 돌아간 상태, 세로로 움직이면서 센터로 위치하게 한다*/
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>03-flex.html</h1>
+    <hr>
+
+
+    <div id="header">
+        <h2>TILET</h2>
+    </div>
+
+    <div id="main">
+        <div id="nav">
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Hello world</h3>
+        </div>
+    </div>
+    
+</body>
+</html>

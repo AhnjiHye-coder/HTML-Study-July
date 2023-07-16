@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-position.html</title>
+    <style>
+        html {
+            scroll-behavior: smooth; /*부드러운 스크롤을 위해서 사용*/
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #nav {
+            /*그림이 있어도 메뉴는 보여야 하기 때문에
+            index를 제일 앞으로 땡겨준다*/
+            z-index: 1;
+            background-color: white;
+            padding: 20px;
+            position: sticky;/*자리를 지키다가 화면에서 없어질때 쯤 스크롤에 영향 받기*/
+            top: 0;
+        }
+        #nav > ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;/*ul의 요소들에 동일한 가격을 둔다*/
+            width: 800px;
+            margin: auto; /*마진을 오토로 주면서 중간으로 위치하게 한다
+            왼쪽 벽과 anv간에 거리에 auto값을 준 것이다*/
+        }
+        #main > img {
+            height: 500px;
+            /*display은 정렬할때 불러오는 속성인데
+            1. inline는 줄바꿈 없이 한줄에 나란히 배치
+            width와 height를 무시한다(반영되지 않는다),
+            또 margin과 padding은 좌우간격만 반영된다
+            
+            2. block는 전후 줄바꿈이 들어가고 한 줄을 모두 차지한다
+            또한, width, height, margin, padding모두 정상 반영된다
+            
+            3. inline-block은 위 두가지를 합쳐놓은 것으로 장점만 가지고 있다
+            전후 줄 바꿈은 없지만(inline), 속성들이 정상 반영된다(block)
+            즉, 내부적으로는 biock이고 보여지는 외부는 inline인 것이다*/
+            display: block; /*한칸씩 배치되면서 속성 적용가능*/
+            margin: auto;
+            opacity: 0.6;/*투명도 0.6으로 설정*/
+            transition-duration: 0.3s;/*투명도설정된 값까지오는 속도*/
+        }
+        #main > img:hover { /*마우스를 올리면*/
+            opacity: 1;     /*투명도 1로 설정*/
+            transition-duration: 1s; /*투명도설정된 값까지오는 속도*/
+        }
+        #remocon {
+            font-size: 40px;
+            display: flex;
+            position: fixed;/*스크롤의 영향을 받지 않는다*/
+            right: 0;  /*오른쪽 공간 0*/
+            bottom: 0; /*맨아래 공간 0*/
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+        a{ /*메뉴글씨*/
+            text-decoration: none; /*글자에 선을 꾸며주는 속성으로 none을 사용하면 안하겠다는 의미이다*/
+            /*
+            text-decoration은 선으로 텍스트를 꾸밀 수 있게 해주는 속성이다
+            none : 선을 만들지 않습니다.
+            line-through : 글자 중간에 선을 만듭니다.
+            overline : 글자 위에 선을 만듭니다.
+            underline : 글자 아래에 선을 만듭니다.
+            initial : 기본값으로 설정합니다.
+            inherit : 부모 요소의 속성값을 상속받습니다.
+            */
+
+            color: inherit; /*부모 색깔을 상속(따라)받는다*/
+        }
+        #nav a:hover {
+            text-decoration: underline;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>06-position.html</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <img src="image/짱아.png"><br><br>
+        <img src="image/짱구.png"><br><br>
+        <img src="image/철수.png"><br><br>
+        <img src="image/유리.png"><br><br>
+        <img src="image/맹구.png"><br><br>
+        <img src="image/훈이.png"><br><br>
+        <img src="image/수지.png"><br><br>
+    </div>
+    
+    <div id="remocon">
+        <div><a href="#header"></a></div>
+        <div><a href="#footer"></a></div>
+    </div>
+    
+    <div id="footer"></div>
+
+
+</body>
+</html>
