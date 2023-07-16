@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-display.html</title>
+    <style>
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>09-display.html</h1>
+    <hr>
+
+    <h4>display(디스플레이)값과 특징</h4>
+    
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <th>display 값</th>
+            <th>특징</th>
+        </tr>
+        <tr>
+            <th>inline</th>
+            <th>content만큼의 크기를 차지한다, width, height를 적용할 수 없다</th>
+        </tr>
+        <tr>
+            <th>block</th>
+            <th>한 줄을 혼자서 차지하고, width, height를 적용할 수 있다</th>
+        </tr>
+        <tr>
+            <th>flex</th>
+            <th>내부 요소를 일정한 기준에 따라 정렬한다</th>
+        </tr>
+        <tr>
+            <th>none</th>
+            <th>요소가 화면에서 사라진다, 자리차지도 없다</th>
+        </tr>
+    </table>
+
+    <br>
+    <fieldset>
+        <div style="display: inline;" class="item">inline</div>
+        <div style="display: inline;" class="item">inline</div>
+        <div style="display: inline;" class="item">inline</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <div style="display: block;" class="item">block</div>
+        <div style="display: block;" class="item">block</div>
+        <div style="display: block;" class="item">block</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <div style="display: inline-block;" class="item">inline-block</div>
+        <div style="display: inline-block;" class="item">inline-block</div>
+        <div style="display: inline-block;" class="item">inline-block</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>display: none</legend>
+        <div style="display: block;" class="item">1</div>
+        <div style="display: none;" class="item">2</div>
+        <div style="display: block;" class="item">3</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>visivility: hidden</legend>
+        <div style="visibility: visible;" class="item">1</div>
+        <div style="visibility: hidden;" class="item">2</div>
+        <div style="visibility: visible;" class="item">3</div>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>opacity: 0</legend>
+        <div style="opacity: 1;" class="item">1</div>
+        <div style="opacity: 0;" class="item">2</div>
+        <div style="opacity: 1;" class="item">3</div>
+    </fieldset>
+    <br>
+
+    <!--
+        display : none은 아예 자리가 없는 것을 말하고
+        visivility: hidden은 자리는 있지만 봉지 않는 것을 말한다
+        opacity: 0은 불투명도를 설정한다, 0이면 보이지 않는 것이다
+    -->
+    
+</body>
+</html>
