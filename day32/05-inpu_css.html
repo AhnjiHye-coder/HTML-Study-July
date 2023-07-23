@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-input-css.html</title>
+    <style>
+        td {
+            border: 2px solid black;
+            padding: 5px 10px;
+        }
+        input {
+            all: unset;
+        }
+        input:focus { /*커서가 있고 마우스도 가져다 놓을 때*/
+            background-color: lightpink;
+        }
+        input:active { /*마우스를 클릭한 상태에서 드레그하듯 입력창 밖으로 끌면*/
+            background-color: skyblue;
+        }
+        input:hover { /*입력창에 커서가 있으면(입력창애 마우스를 올리면)*/
+            background-color: lightgreen;
+        }
+        input[name="test2"] {
+            all: unset;
+            border-bottom: 2px solid black;
+            padding: 5px;
+            transition-duration: 0.5s;
+            width: 150px;
+        }
+        input[name=test2]:focus {
+            width: 180px;
+            border-bottom: 2px solid black;
+            transition-duration: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>05-input-css.html</h1>
+    <hr>
+
+    <table>
+        <tr>
+            <td> <!--그림을 배치하면 디브가 input을 감싸고 있는데
+            이모지는 디브와 input 사이에 들어간다-->
+            ❤️<input type="text" name="test1">
+            </td>
+            <td>
+                input을 선택하여 포커스를 받고 있는 중이면 적용되는 스타일
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" name="test2" placeholder="검색"></td>
+            <td>focus 중일때만 커지는 input</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-calculator.html</title>
+
+    <style>
+        #root {
+            display: flex;
+            justify-content: space-between;
+        }
+        #calc {
+            cursor: context-menu;/*context-menu은 마우스 올려도 바뀌지 않음(cursor(커서)의 대한 옵션)*/
+            user-select: none;
+            width: 320px;
+            height: 500px;
+            border: 0.5px solid black;
+            margin: 50px auto;
+        }
+        /*#calc > div { 범위를 보기 위한 선
+           /* border: 0.5px dashed orangered; /*테두리(dashed : 점선)*/
+        /*}*/
+        .flex {
+            display: flex;
+        }
+        .top { /* padding : 앞 - 상하   뒤 - 좌우*/
+            padding: 5px 20px;/*여백*/
+        }
+        .top > .flex > div {
+            margin: 0 15px;
+        }
+        .top {
+            padding-right: 0;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        .mode { /*앞 : 상하   뒤 : 좌우*/
+            padding: 10px 5px;
+        }
+        .input {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: right;
+            padding: 10px;
+        }
+        .mbtns > div {
+            padding: 10px 10px;
+            font-size: 14px;
+        }
+        .btns {
+            display: flex;
+            flex-flow: wrap;
+        }
+        .btns > div {
+            background-color: white;
+            box-sizing: border-box;
+            width: 24%;
+            height: 3em;
+            line-height: 3em;
+            text-align: center; /*글자 가운데 정렬*/
+            border: 0.5px solid #e4e4e4;
+            border-radius: 5px;
+            margin: 1px auto;
+            box-shadow: 1px 1px 1px #cccccc;
+        }
+        /*마지막 파란 버튼 속성*/
+        .btns > div:last-child {
+            background-color: #005ca2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>01-calculator.html</h1>
+    <hr>
+    <!--<input type="color"> : 색깔 따라하고 싶을때 사용하면 좋음-->
+    
+    <div id="root">
+        <div id="sample">
+            <img src="계산기.jpg">
+        </div>
+    </div>
+
+    <div id="calc">
+        <!--네모 형식 5개를 만든다(배경)-->
+        <div class="top sb">
+            <div class="">📱계산기</div>
+            <div class="flex">
+            <div>_</div>    
+            <div>□</div>    
+            <div>X</div>    
+            </div>
+        </div>
+        <div class="mode sb">
+            <div class="">표준♐</div>
+            <div class="">🔄</div>
+        </div>
+
+        <div class="input">0</div>
+
+        <div class="mbtns sb">
+            <div>MC</div>
+            <div>MR</div>
+            <div>M+</div>
+            <div>M-</div>
+            <div>MS</div>
+            <div>M∨</div>
+        </div>
+
+        <div class="btns">
+            <div>％</div>
+            <div>CE</div>
+            <div>C</div>
+            <div>←</div>
+            <div>1/x</div>
+            <div>x<sup>2</sup></div>
+            <div><sup>2</sup>√x</div>
+            <div>÷</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>x</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>+/-</div>
+            <div>0</div>
+            <div>.</div>
+            <div>=</div>
+        </div>
+    </div>
+
+</body>
+</html>
